@@ -1,0 +1,396 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 100%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.app {
+    background-color: #ffffff ;
+}
+
+/* header */
+.header {
+    height: 64px;
+    width: 100%;
+    background-color: #ffa000;
+    display: flex;
+    justify-content: center;
+}
+
+.header__nav-wrap {
+    height: 100%;
+    width: 70%;
+    text-align: center;
+}
+
+.header__nav-wrap .brand-logo {
+    display: inline-block;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    padding-top: 20px;
+    font-size: 2.1rem;
+}
+/* body */
+.container {
+    margin: 0 250px;
+}
+
+.container__title {
+    text-align: center;
+    padding: 32px 0;
+}
+
+.container__title .title__text {
+    width: 100%;
+    color: #ffd180;
+    font-size: 2.92rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 6px 1px rgb(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.tab-item {
+    width: 50%;
+    color: #ee6e73;
+    text-align: center;
+    cursor: pointer;
+    transition: all .1s linear;
+}
+
+
+.tab-item:hover {
+    opacity: 0.7;
+}
+
+.tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ee6e73;
+    transition: all .3s ease;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-content {
+    margin-top: 30px;
+}
+
+.pane-passport,
+.pane-wallet {
+    display: flex;
+    margin: 10px 0;
+}
+
+.tab-item.active {
+    display: block;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.pane-select h4 {
+    font-size: 2.28rem;
+    font-weight: 400;
+}
+.color-select,
+.charm-select,
+.pane-image {
+    margin-top: 16px;
+}
+
+.color-select img,
+.charm-select img {
+    margin-left: 15px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px 0px rgb(0, 0, 0, 0.75);
+    width: 60px;
+    height: 60px
+}
+
+.pane-image {
+    position: relative;
+}
+/* note: Cần responsive để fix  */
+.pane-image .lbNote-passport {
+    font-weight: 400;
+    font-size: 23px;
+    position: absolute;
+    bottom: 74px;
+    transform: rotate(-10deg);
+    right: 55px;
+    color: rgb(119, 72, 34);
+    width: 179px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.pane-image .lbNote-wallet {
+    font-weight: 400;
+    font-size: 23px;
+    position: absolute;
+    bottom: 105px;
+    transform: rotate(-10deg);
+    right: 142px;
+    color: rgb(119, 72, 34);
+    width: 120px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.pane-image .charm-img {
+    position: absolute;
+    bottom: 130px;
+    transform: rotate(-10deg);
+    right: 60px;
+    color: rgb(119, 72, 34);
+    width: 78px;
+}
+
+.cart-img {
+    width: 50px;
+    height: 50px;
+}
+
+.image.selected {
+    opacity: 1;
+}
+
+.image {
+    cursor: pointer;
+}
+
+.note-box__text {
+    font-weight: 400;
+    font-size: 2.28rem;
+    line-height: 1;
+}
+
+.note-input {
+    display: flex;
+    align-items: flex-end;
+    margin: 32px 0;
+}
+
+.note-input i {
+    color: #26a69a;
+    font-size: 28px;
+}
+
+.note-input-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    position: relative;
+    width: 50%;
+}
+
+.note-input-wrap input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #333;  
+}
+
+.btn {
+    margin-left: 20px;
+    border-color: transparent;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #26a69a;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-order i {
+    margin-left: 6px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.btn-delete {
+    cursor: pointer;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #333;  
+    width: 100%;
+}
+
+.input-field input:focus{
+    border-color: #26a69a;
+}
+
+.note-input-wrap label {
+    color: #9e9e9e;
+    position: absolute;
+    cursor: text;
+    transition: .2s ease-out;
+    top: -10px;
+    left: 0;
+    font-size: 16px;
+}
+
+.input-box.invalid .form-control {
+    border-color: #f33a58;
+}
+
+.input-box.invalid {
+    color: #f33a58;;
+}
+
+.container__order-info {
+    display: flex;
+    width: 100%;
+    margin-top: 52px;
+}
+
+.order-shipping h4 {
+    font-weight: 400;
+    font-size: 2.28rem;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 48px;
+}
+
+.input-box {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.input-field {
+    margin-left: 8px;
+    width: 70%;
+}
+
+.input-box__icon {
+    font-size: 22px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.input-box label {
+    color: #9e9e9e;
+    position: absolute;
+    cursor: text;
+    transition: .2s ease-out;
+    top: 0;
+    left: 2px;
+    font-size: 14px;
+}
+
+.orderd-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.orderd-list {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;
+}
+
+.orderd-list tr {
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.orderd-list td,th {
+    padding: 15px 5px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+    border: none;
+}
+
+.orderd-list .total-orderd-count {
+    text-align: right;
+}
+
+.table-footer {
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.table-footer p {
+    margin: 12px 0;
+    line-height: 1.8;
+}
+
+.btn-buy {
+    margin-left: 0;
+}
+
+.notifycation.hasNotice {
+    color: #f33a58;
+}
+
+.footer {
+    background-color: #ffa000;
+    height: 64px;
+    margin-top: 28px;
+    position: relative;
+    
+}
+
+.footer__copyright {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    height: 34px;
+    margin-top: 5px;
+    text-align: left;
+    bottom: 0;
+}
+
+.footer__container {
+    width: 70%;
+}
+
+.footer__container a {
+    text-decoration: none;
+    color: #ffcc80 ;
+}
+
+
+

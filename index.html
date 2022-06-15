@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Order</title>
+    <style>
+        
+    @media (min-width: 1024px) and (max-width:1239px) {
+        .pane-image .lbNote-passport {
+            bottom: 73px;
+            right: -22px;
+        }
+
+        .pane-image .charm-img {
+            bottom: 130px;
+            right: -7px;
+        }
+    }
+
+    @media (max-width: 1238px ) {
+        .pane-image .lbNote-wallet {
+            right: 50px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="app ">
+        <!-- Header -->
+        <header class="header">
+            <div class="header__nav-wrap">
+                <a href="#" class="brand-logo">My Store</a>
+            </div>
+        </header>
+        <!-- Container -->
+        <div class="container grid wide">
+            <div class="container__title">
+                <h3 class="title__text">Order nhanh chóng và tiện lợi</h3>
+            </div>
+            <div class="container__category">
+                <!-- tabs item -->
+                <div class="tabs">
+                    <div class="tab-item active">
+                        <span class="tab-title">
+                            PASSOPRT COVER
+                        </span>
+                    </div>
+                    <div class="tab-item">
+                        <span class="tab-title">
+                            WALLET COVER
+                        </span>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <!-- tab content -->
+                <div class="tab-content">
+                    <div class="tab-pane active"</div>
+                        <div class="pane-passport row">
+                            <div class="pane-select col l-8">
+                                <h4>Chọn màu</h4>
+                                <div class="color-select" id="select-passport">
+                                    <!-- <img src="img/passport/1.jpg" alt="" class="image"> -->
+                                </div>
+                                <h4>Chọn charm</h4>
+                                <div class="charm-select" id="select-charm">
+                                    <!-- <img src="img/charm/1.png" alt="" class="image"> -->
+                                </div>
+                            </div>
+                            <div class="pane-image col l-4">
+                                <img src="img/passport/1.jpg" alt="" class="passport-img">
+                                <h5 class="lbNote-passport" id="lbNotePassport"></h5>
+                                <img src="img/charm/1.png" alt="" class="charm-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane"</div>
+                        <div class="pane-wallet row">
+                            <div class="pane-select col l-6">
+                                <h4>Chọn màu</h4>
+                                <div class="color-select" id="select-wallet"">
+                                    <!-- <img src="img/wallet/1.jpg" alt="" class="image"> -->
+                                </div>
+                            </div>
+                            <div class="pane-image col l-6">
+                                <img src="img/wallet/1.jpg" alt="" class="wallet-img">
+                                <h5 class="lbNote-wallet" id="lbNoteWallet"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- note content -->
+                <div class="note-box">
+                    <h4 class="note-box__text">Nhập note (Tiếng Việt không dấu)</h4>
+                    <div class="note-input">
+                        <i class="fas fa-sticky-note"></i>
+                        <div class="note-input-wrap">
+                            <input type="text" id="note-input" class="note-text" placeholder="Note">
+                        </div>
+                        <button class="btn btn-order">
+                            Mua <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="container__order-info row">
+                <div class="order-shipping col l-8">
+                    <h4>Thông tin giao hàng</h4>
+                    <div class="input-group row" id="input-group-1">
+                        <div class="input-box col l-6">
+                            <i class="fas fa-user input-box__icon"></i>
+                            <div class = "input-field">
+                                <input type="text" id="name" class="form-control" placeholder="Tên người nhận">    
+                                <span class="form-msg"></span>  
+                            </div>
+                        </div>
+                        <div class="input-box col l-6">
+                            <i class="fas fa-phone input-box__icon"></i>
+                            <div class = "input-field">
+                                <input type="text" id="phone" class="form-control" placeholder="Số điện thoại">    
+                                <span class="form-msg"></span>  
+                            </div>
+                        </div>
+                        <div class="input-box col l-6">
+                            <i class="fas fa-home input-box__icon"></i>
+                            <div class = "input-field">
+                                <input type="text" id="address" class="form-control" placeholder = "Địa chỉ giao hàng">    
+                                <span class="form-msg"></span>  
+                            </div>
+                        </div>
+                        <div class="input-box col l-6">
+                            <i class="fas fa-comment-alt input-box__icon"></i>
+                            <div class = "input-field">
+                                <input type="text" id="note" class="form-control" placeholder = "Ghi chú"> 
+                                <span class="form-msg"></span>   
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="order-orderd col l-4">
+                    <h5 class="orderd-title">Sản phẩm đã đặt</h5>
+                    <table class="orderd-list">
+                        <thead>
+                            <tr style="font-size: 14px;">
+                                <th>Loại</th>
+                                <th>Màu</th>
+                                <th>Charm</th>
+                                <th>Tên</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="total-orderd-count" colspan="5">Tổng cộng: 0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-footer">
+                        <div>
+                            <p>1. Chọn màu, charm và chữ bạn muốn khắc.</p>
+                            <p>2. Bấm "Mua" để đặt mua 1 sản phẩm. Bạn có thể đặt mua nhiều sản phẩm khác màu, charm và chữ.</p>
+                            <p>3. Sau khi mua ít nhất 1 sản phẩm, bấm "Đặt hàng" để thực hiện đặt hàng.</p>
+                            <p class = "notifycation">4. Vui lòng điền tên, số điện thoại và địa chỉ giao hàng.</p>
+                        </div>
+                        <button class = "btn btn-buy">
+                            Đặt hàng <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer__copyright">
+                <div class="footer__container">
+                    Copyright by |
+                    <a href="" class="owner">H.Hoang</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/main.js" type="text/javascript"></script>
+    <script>
+        Validator ({
+            form: '#input-group-1',
+            errorSelector: '.form-msg',
+            rules: [
+                Validator.isRequired('#name'),
+                Validator.isRequired('#phone'),
+                Validator.isRequired('#address')
+            ]
+        })
+    </script>
+</body>
+</html>

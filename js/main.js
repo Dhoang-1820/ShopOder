@@ -447,7 +447,7 @@ const app = {
             return -1
         }
         const indexOfCart = getIndexOfCart (item)
-        carts.splice(indexOfCart)
+        carts.splice(indexOfCart, 1)
         table.deleteRow(i)
         totalItems.innerText = `Tổng cộng: ${table.rows.length - 2}` // -2 because except 2 row first and last         
     },

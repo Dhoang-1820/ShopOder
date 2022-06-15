@@ -427,16 +427,27 @@ const app = {
         }        
     },
     delBtn: function (row) {
+        const carts = this.cart
         const table = $('.orderd-list')
         const totalItems = table.querySelector('.total-orderd-count')
         var i = row.parentNode.parentNode.rowIndex;
-        // const children = table.rows[i].children
-        // const item = {
-        //     type: children[0].innerText,
-        //     color: children[1].children[0].getAttribute('src'),
-        //     charm: children[2].children[0].getAttribute('src'),
-        //     name: children[3].innerText,
-        // }                
+        const children = table.rows[i].children
+        const item = {
+            type: children[0].innerText,
+            color: children[1].children[0].getAttribute('src'),
+            charm: children[2].children[0].getAttribute('src'),
+            name: children[3].innerText,
+        }      
+        function getIndexOfCart (item) {
+            for (let i = 0; i < carts.length; i++) {
+                if (carts[i].type == item.type && carts[i].color == item.color && carts[i].name == item.name && carts[i].charm == item.charm) {
+                    return i
+                }  
+            }
+            return -1
+        }
+        const indexOfCart = getIndexOfCart (item)
+        carts.splice(indexOfCart)
         table.deleteRow(i)
         totalItems.innerText = `Tổng cộng: ${table.rows.length - 2}` // -2 because except 2 row first and last         
     },
